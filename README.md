@@ -1,10 +1,12 @@
-# PowerShell CSV PC Inventory
-This PowerShell script will collect the Date of inventory, IP and MAC address, serial number, model, CPU, RAM, total storage size, GPU(s), OS, OS build, logged in user, and the attached monitor(s) of a computer.
+# Inventário de Computadores Windows via PowerShell salvando em CSV
 
-After it collects that information, it is outputted to a CSV file. It will first check the CSV file (if it exists) to see if the hostname already exists in the file. 
+Este script do PowerShell coletará a data do inventário, endereço IP e MAC, número de série, modelo, CPU, RAM, tamanho total de armazenamento, GPU(s), sistema operacional, compilação do sistema operacional, usuário conectado e monitor(es) conectado(s) de um computador.
 
-If hostname exists in the CSV file, it will overwrite it with the latest information so that the inventory is up to date and there is no duplicate information.
- It is designed to be run as a login script and/or a scheduled/immediate task run by a domain user. Elevated privileges are not required.
+Após coletar essas informações, elas são enviadas para um arquivo CSV. Ele primeiro verificará o arquivo CSV (se existir) para ver se o nome do host já existe no arquivo.
+
+Se o nome do host existir no arquivo CSV, ele o substituirá pelas informações mais recentes para que o inventário fique atualizado e não haja informações duplicadas.
+Ele foi projetado para ser executado como um script de login e/ou uma tarefa agendada/imediata executada por um usuário de domínio. Privilégios elevados não são necessários.
+
 #  Screenshots
 Here is an example of what the script will output once you've used the -c flag to consolidate all the individual inventory logs into one report:
 ![](https://raw.githubusercontent.com/sbirdsill/PowerShell-PC-Inventory/master/Images/Sample.png)
